@@ -319,7 +319,8 @@ var scrollData = function () {
                 return 5 * d.row;
             })
             .attr('opacity', 1.0)
-            .attr('fill', '#ddd');
+            .attr('fill', '#ddd')
+            .attr('rx', '14px')
     }
 
     /**

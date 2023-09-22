@@ -314,7 +314,7 @@ var scrollData = function () {
             .transition()
             .duration(250)
             .delay(function (d) {
-                return 6 * d.row;
+                return 5 * d.row;
             })
             .attr('opacity', 1.0)
             .attr('fill', '#ddd');

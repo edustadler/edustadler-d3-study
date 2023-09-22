@@ -330,6 +330,7 @@ var scrollData = function () {
      *  filler words. also ensures squares
      *  are moved back to their place in the grid
      */
+    
     function highlightGrid() {
         hideAxis();
         g.selectAll('.bar')
@@ -446,6 +447,7 @@ var scrollData = function () {
         g.selectAll('.hist')
             .transition()
             .duration(600)
+            .attr('rx', '14px')
             .attr('y', function (d) { return (d.x0 < 15) ? yHistScale(d.length) : height; })
             .attr('height', function (d) { return (d.x0 < 15) ? height - yHistScale(d.length) : 0; })
             .style('opacity', function (d) { return (d.x0 < 15) ? 1.0 : 1e-6; });

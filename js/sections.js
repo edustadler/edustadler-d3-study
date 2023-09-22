@@ -355,6 +355,7 @@ var scrollData = function () {
         g.selectAll('.fill-square')
             .transition('move-fills')
             .duration(400)
+            .attr('rx', '50px')
             .attr('x', function (d) {
                 return d.x;
             })

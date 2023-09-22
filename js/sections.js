@@ -162,6 +162,8 @@ var scrollData = function () {
             .append('rect')
             .attr('class', 'bar');
         bars = bars.merge(barsE)
+            .attr('rx', '17px')
+            .attr('ry', '85px')
             .attr('x', 0)
             .attr('y', function (d, i) { return yBarScale(i); })
             .attr('fill', function (d, i) { return barColors[i]; })

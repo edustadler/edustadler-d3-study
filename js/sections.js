@@ -249,13 +249,6 @@ var scrollData = function () {
      * These will be called their
      * section is scrolled to.
      *
-     * General pattern is to ensure
-     * all content for the current section
-     * is transitioned in, while hiding
-     * the content for the previous section
-     * as well as the next section (as the
-     * user may be scrolling up or down).
-     *
      */
 
     /**
@@ -319,9 +312,9 @@ var scrollData = function () {
 
         g.selectAll('.square')
             .transition()
-            .duration(600)
+            .duration(250)
             .delay(function (d) {
-                return 5 * d.row;
+                return 6 * d.row;
             })
             .attr('opacity', 1.0)
             .attr('fill', '#ddd');
@@ -339,7 +332,7 @@ var scrollData = function () {
         hideAxis();
         g.selectAll('.bar')
             .transition()
-            .duration(600)
+            .duration(300)
             .attr('width', 0);
 
         g.selectAll('.bar-text')
@@ -359,7 +352,7 @@ var scrollData = function () {
         // transitions are interrupted.
         g.selectAll('.fill-square')
             .transition('move-fills')
-            .duration(800)
+            .duration(400)
             .attr('x', function (d) {
                 return d.x;
             })
@@ -369,8 +362,8 @@ var scrollData = function () {
 
         g.selectAll('.fill-square')
             .transition()
-            .duration(800)
-            .attr('opacity', 1.0)
+            .duration(400)
+            .attr('opacity', .8)
             .attr('fill', function (d) { return d.filler ? '#2A76BA' : '#ddd'; });
     }
 
@@ -388,12 +381,12 @@ var scrollData = function () {
 
         g.selectAll('.square')
             .transition()
-            .duration(800)
+            .duration(400)
             .attr('opacity', 0);
 
         g.selectAll('.fill-square')
             .transition()
-            .duration(800)
+            .duration(600)
             .attr('x', 0)
             .attr('y', function (d, i) {
                 return yBarScale(i % 3) + yBarScale.bandwidth() / 2;
@@ -404,7 +397,7 @@ var scrollData = function () {
 
         g.selectAll('.hist')
             .transition()
-            .duration(600)
+            .duration(200)
             .attr('height', function () { return 0; })
             .attr('y', function () { return height; })
             .style('opacity', 0);

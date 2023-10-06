@@ -113,6 +113,8 @@ var scrollData = function () {
             .attr('y', (height / 3) + (height / 5))
             .text('Edu Stadler');
 
+
+
         g.append('text')
             .attr('class', 'sub-title openvis-title')
             .attr('x', width / 2)
@@ -131,11 +133,20 @@ var scrollData = function () {
 
         g.append('image')
             .attr('class', 'latticeflow-logo count-title')
-            .attr('x', width / 2 - imageWidth / 2) // Adjust the position as needed
-            .attr('y', (height / 2) + (height / 5) - imageHeight / 2) // Adjust the position as needed
-            .attr('width', imageWidth) // Set the width of the image
-            .attr('height', imageHeight) // Set the height of the image
+            .attr('x', width / 2 - imageWidth / 2)
+            .attr('y', (height / 2) + (height / 5) - imageHeight / 2)
+            .attr('width', imageWidth)
+            .attr('height', imageHeight)
             .attr('xlink:href', 'https://latticeflow.ai/wp-content/uploads/2023/07/latticeflow.svg');
+
+            g
+            .append("foreignObject")
+            .attr('x', width / 1.92 )
+            .attr('y', (height / 2) + (height / 2.4))
+            .attr('class', 'count-title')
+            .attr("width", 200)
+            .attr("height", 100)
+            .html('<a href="https://edustadler.com" class="cta-svg">hyperlink inside the svg</a>');
 
         g.selectAll('.count-title')
             .attr('opacity', 0);
@@ -331,7 +342,7 @@ var scrollData = function () {
      *  filler words. also ensures squares
      *  are moved back to their place in the grid
      */
-    
+
     function highlightGrid() {
         hideAxis();
         g.selectAll('.bar')

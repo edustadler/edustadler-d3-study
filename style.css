@@ -13,6 +13,18 @@ header {
     height: 200px;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: .625rem;
+}
+
+nav button {
+    padding: .625rem 1.5625rem;
+    border-radius: 10%;
+}
+
 .container {
     width: 71.25rem;
     margin: auto;
@@ -84,4 +96,18 @@ header {
 
 .final-space {
     height: 400px;
+}
+
+.hyperl {
+    display: flex;
+    width: 32%;
+}
+
+.cta-svg {
+    border: solid .0625rem #3e8ede;
+    border-radius: 10px;
+    padding: .625rem;
+    margin: auto;
+    background-color: #3e8ede;
+    color: #fff;
 }

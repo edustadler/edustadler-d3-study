@@ -16,6 +16,10 @@ header {
     border: 0;
 }
 
+a {
+    color: #fff;
+}
+
 nav {
     border: 0;
     background: rgba(255, 255, 255, 0.5);
